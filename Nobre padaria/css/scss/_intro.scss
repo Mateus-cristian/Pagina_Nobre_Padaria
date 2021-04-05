@@ -1,0 +1,212 @@
+.intro-bg {
+    display: block;
+    max-width: 100%;
+    background: url(../Imgs/Intro-bg.jpg) no-repeat center;
+    background-size: cover;
+    height: 500px;
+    @include d(m) {
+        max-width: 100%;
+        height: 400px;
+    }
+    //Dminuindo tamanho da foto da intro no mobile
+    @include d(s) {
+        height: 250px;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.intro {
+    display: flex;
+    max-width: 100%;
+    //diminuindo largura da intro no tablet
+    @include d(m) {
+        width: 780px;
+    }
+}
+
+.logo {
+    font-family: 'Pacifico', monospace;
+    font-size: 48px;
+    display: inline-block;
+    margin: 50px 0px 0 100px;
+    color: white;
+}
+//diminuindo largura do logo no tablet
+@include d(m) {
+    .logo {
+        font-size: 36px;
+        margin: 50px 0px 0 30px;
+    }
+}
+//diminuindo largura do logo no mobile
+@include d(s) {
+    .logo {
+        font-size: 24px;
+        margin: 30px 0px 0 10px;
+        display: inline-block;
+    }
+}
+
+.menu ul {
+    display: inline-flex;
+    margin-left: 400px;
+    @include tipo-2(18);
+    @include d(m) {
+        margin-left: 10px;
+        width: 450px;
+    }
+    //deixando transparente para aparecer o menu hamburguer
+    @include d(s) {
+        color: transparent;
+        margin-left: 0;
+    }
+    li {
+        margin-top: 30px;
+        padding: 30px 20px;
+        color: aqua;
+        //mudando o tamanho da tipográfia
+        @include d(s) {
+            @include tipo-2(13);
+            margin: 0px 0px;
+            padding: 0;
+            display: none;
+        }
+        a {
+            color: white;
+            &:hover {
+                color: #269BFF;
+            }
+            //deixando none para não sobrepor o menu hamburguer
+            @include d(s) {
+                display: none;
+                &:hover {
+                    color: #269BFF;
+                }
+            }
+        }
+    }
+}
+
+.boas-vindas {
+    text-align: center;
+    margin-top: 60px;
+    color: white;
+    p {
+        //alterando as fontes para o mobile
+        @include tipo-1(36);
+        @include d(s) {
+            font-size: 2em;
+            line-height: 1.4em;
+        }
+        @include d(s) {
+            @include tipo-1(24);
+            font-size: 1em;
+            top: 25px;
+            margin-top: -30px;
+            position: relative;
+            left: -25px;
+        }
+    }
+}
+
+//Menu Hamburger para o mobile
+.mobile-btn {
+    @include d(s) {
+        //criando a linha do meio e centralizando o menu
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        color: white;
+        border-top: 4px solid;
+        top: 20px;
+        left: 32%;
+        position: relative;
+        cursor: pointer;
+        -webkit-backface-visibility: hidden;
+        @include d(xs) {
+            left: -20px;
+            position: relative;
+            display: inline-block;
+        }
+        @include d(m) {
+            display: none;
+        }
+        //criando a linha superior e inferior
+        &::after,
+        &::before {
+            content: '';
+            display: block;
+            height: 4px;
+            margin-top: 6px;
+            background: currentColor;
+            position: relative;
+            transition: transform .2s ease;
+            
+        }
+        //função que rotaciona o menu
+        &:hover {
+            border-top-color: transparent;
+            &::after {
+                margin-top: 0px;
+                top: 2px;
+                transform: rotate(45deg);
+            }
+            &:hover::before {
+                margin-top: 0px;
+                top: 6px;
+                transform: rotate(135deg);
+            }
+        }
+    }
+}
+
+
+@media only screen and(max-width:450px) {
+    .menu ul.active {
+        @include tipo-2(13);
+        display: block;
+        right: 10px;
+        width: 100px;
+        height: 130px;
+        font-size: 14px;
+        top: 60px;
+        position: absolute;
+        color: white;
+        border-left: 2px solid white;
+        background: transparent;
+        padding: 10px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translate3d(60px, 0, 0);
+        transition: .3s;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -15px;
+            top: -3px;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 15px solid white;
+        }
+    }
+    .menu ul.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+    }
+    .menu ul li {
+        display: block;
+    }
+    .menu ul.active li a {
+        border-top: 2px solid;
+        text-align: center;
+        color: white;
+        display: block;
+        &:hover {
+            color: #269bff;
+        }
+    }
+}

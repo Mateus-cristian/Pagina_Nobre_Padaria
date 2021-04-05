@@ -1,0 +1,191 @@
+        .container-form-info {
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        
+        .mensagem-titulo {
+            margin: 0px 80px 60px;
+            display: block;
+            @include tipo-1(48);
+            //centralizar o titulo no tablet
+            @include d(m) {
+                margin: 50px 50px;
+            }
+            //centralizar o titulo no mobile
+            @include d(s) {
+                margin: 50px 0 50px 10px;
+                display: block;
+                letter-spacing: -0.1rem;
+                @include tipo-1(36);
+                font-size: 30px;
+                font-weight: bold;
+            }
+        }
+        
+        .mensagem p {
+            margin-left: 90px;
+            @include tipo-2(18);
+            @include d(m) {
+                //centralizar o paragráfo no tablet
+                margin: 0px 40px;
+            }
+            @include d(s) {
+                //centralizar o paragráfo no tablet
+                margin: 0px auto;
+                @include tipo-2(13);
+                letter-spacing: .1rem;
+            }
+        }
+        
+        .icones-fundo1 {
+            display: block;
+            position: relative;
+            top: -150px;
+            left: -70px;
+            //retirando os icones de fundo do tablet e mobile
+            @include d(m) {
+                display: none;
+            }
+            @include d(s) {
+                display: none;
+            }
+        }
+        
+        .icones-fundo2 {
+            display: block;
+            position: relative;
+            top: -150px;
+            right: -100px;
+            @include d(m) {
+                display: none;
+            }
+            @include d(s) {
+                display: none;
+                position: relative;
+                top: -250px;
+                right: -100px;
+            }
+        }
+        
+        .container-form {
+            display: flex;
+            margin: 0 auto;
+            //centralizar o container do formulario no tablet e mobile
+            @include d(m) {
+                margin: 100px auto 0px auto;
+                display: block;
+            }
+            @include d(s) {
+                max-width: 100%;
+                display: block;
+                margin: 30px auto;
+                padding: 0;
+            }
+        }
+        
+        .container-form p {
+            @include tipo-2(18);
+            display: block;
+            margin-left: 150px;
+            @include d(s) {
+                position: relative;
+                margin-left: 0px;
+            }
+        }
+        
+        .container-form input {
+            Width: 450px;
+            Height: 48px;
+            margin-left: 150px;
+            border-radius: 5px;
+            background: #EFF4F9;
+            box-shadow: $box-shadow;
+            font-weight: normal;
+            @include tipo-2(24);
+            //diminuir tamanho do input e centralizando ele no mobile
+            @include d(s) {
+                Width: 300px;
+                Height: 48px;
+                position: relative;
+                margin: 0 auto;
+                margin-left: 0px;
+            }
+        }
+        
+        .container-form input:nth-child(2) {
+            margin: 0 0 30px 150px;
+            @include d(s) {
+                margin: 0 0 30px 0px;
+            }
+        }
+        
+        .form-mensagem {
+            margin: 0 auto;
+            display: block;
+            position: relative;
+            bottom: 185px;
+            left: 650px;
+            //centralizando no tablet
+            @include d(m) {
+                margin: 100px auto;
+                display: inline-block;
+                position: relative;
+                top: -40px;
+                left: 150px;
+            }
+            //centralizando no mobile
+            @include d(s) {
+                margin: 0px auto;
+                position: relative;
+                top: 30px;
+                left: 0px;
+            }
+        }
+        
+        .form-mensagem p {
+            margin: 0;
+            @include d(s) {
+                position: relative;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        
+        .form-mensagem textarea {
+            Width: 450px;
+            display: block;
+            Height: 170px;
+            border-radius: 5px;
+            background: #EFF4F9;
+            box-shadow: $box-shadow;
+            font-weight: normal;
+            @include tipo-2(24);
+            resize: none;
+            //para dar uma margem ao botao
+            @include d(m) {
+                display: block;
+            }
+            //container da mensagem reduzido no mobile
+            @include d(s) {
+                Width: 300px;
+                Height: 170px;
+                border-radius: 5px;
+                background: #EFF4F9;
+                box-shadow: $box-shadow;
+                font-weight: normal;
+                @include tipo-2(24);
+                resize: none;
+            }
+        }
+        
+        .form-mensagem button {
+            margin-top: 30px;
+            Width: 270px;
+            Height: 50px;
+            border-radius: 5px;
+            background: #D91504;
+            color: white;
+            border: none;
+            margin-bottom: 60px;
+        }

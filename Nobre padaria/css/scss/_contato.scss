@@ -1,0 +1,163 @@
+.contato h1 {
+    text-align: center;
+    font-weight: bold;
+    @include tipo-1(36);
+    @include d(s) {
+        display: block;
+        margin: 60px 0 0 0;
+    }
+}
+
+.container-contato {
+    display: flex;
+    flex-wrap: wrap;
+    @include d(s) {
+        display: block;
+        margin-top: 60px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.separador-pao img {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: -45px;
+    z-index: 200;
+    //centralizando separador no mobile
+    @include d(s) {
+        display: none;
+    }
+}
+
+.mapa {
+    margin: 120px 90px 0 60px;
+    //centralizando responsivo para o tablet
+    @include d(m) {
+        margin: 30px auto;
+        display: block;
+    }
+    //centralizando responsivo para o mobile
+    @include d(s) {
+        margin: 30px auto;
+        display: block;
+    }
+}
+
+@media only screen and(max-width:430px) {
+    .mapa {
+        width: 300px;
+    }
+    .mapa img {
+        width: 300px !important;
+        margin: 0 auto !important;
+    }
+}
+
+.mapa img {
+    //mapa no tamanho menor para o mobile
+    @include d(s) {
+        margin: 0 0;
+        width: 350px;
+    }
+}
+
+.separador {
+    margin-top: 90px;
+    margin-left: 20px;
+    //retirando separador para o tablet e mobile
+    @include d(m) {
+        display: none;
+    }
+    @include d(s) {
+        display: none;
+    }
+}
+
+.info-padaria {
+    margin: 100px auto;
+}
+
+h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    @include tipo-2(21);
+}
+
+.flecha {
+    font-weight: bold;
+    color: $cor-texto;
+    &::after {
+        Content: '🢂';
+        color: red;
+        margin-left: 10px;
+    }
+}
+
+.info-padaria {
+    //margins no mobile
+    @include d(s) {
+        display: block;
+        margin: 60px 0 90px 0;
+    }
+}
+
+.encomendas {
+    margin: 30px auto;
+    &::before {
+        content: "";
+        display: block;
+        width: 470px;
+        border-bottom: 2px solid #CCC;
+        position: relative;
+        top: -10px;
+        //para centralizar o separador no tablet
+        @include d(m) {
+            top: -10px
+        }
+        //para centralizar o separador no mobile
+        @include d(s) {
+            top: -10px;
+            width: 300px;
+        }
+    }
+    &::after {
+        content: "";
+        display: block;
+        width: 470px;
+        border-bottom: 2px solid #CCC;
+        position: relative;
+        top: 105px;
+        @include d(s) {
+            width: 300px;
+        }
+    }
+}
+
+.horario {
+    margin: 40px 0 20px 0;
+    position: relative;
+    &::before {
+        content: '';
+        display: inline;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 10px;
+        left: -12px;
+        border-radius: 50px;
+        background: lawngreen;
+        @include d(s) {
+            left: -9px;
+        }
+    }
+    //diminuindo a margin da label no tablet
+    @include d(m) {
+        margin: 20px 0 20px 0px;
+    }
+    //diminuindo a margin da label no tablet
+    @include d(s) {
+        margin: 20px 0 20px 0px;
+    }
+}

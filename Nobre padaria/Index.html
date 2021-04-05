@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gabriela&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="container intro-bg ">
+        <div class="intro">
+            <div class="logo">
+                <p>Nobre Padaria</p>
+            </div>
+            <span class="mobile-btn"></span>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#faleConosco">Fale Conosco</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="boas-vindas">
+            <p class="mensagemDia">Desejamos a você</p><br>
+            <br>
+            <p data-dia="semana" class="diaDaSemana"></p>
+        </div>
+    </section>
+
+    <section id="sobre" class="container">
+        <h1 class="sobre-titulo">Quem Somos</h1>
+        <div class="sobre">
+            <div class="img-padaria">
+                <img src="Imgs/Padaria.jpg">
+            </div>
+            <p class="texto-sobre">Ut non tincidunt nulla. Morbi sed nisl vel mauris faucibus rhoncus. Aliquam ac neque eu ligula placerat ornare. Nulla sollicitudin pellentesque risus, ac fringilla diam pretium eget. Aenean dapibus, tellus at fermentum gravida, odio mauris
+                viverra magna, fermentum maximus risus enim eu purus. Pellentesque consectetur scelerisque diam, id bibendum arcu. Nullam iaculis in eros quis ornare.<br><br> In cursus vitae purus vel volutpat. Praesent in est enim. In hac habitasse platea
+                dictumst. Nulla at suscipit mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquet urna vel metus bibendum, commodo rhoncus velit dapibus. Ut tincidunt facilisis ullamcorper. Aenean gravida, ligula.<br>In cursus vitae
+                purus vel volutpat. Praesent in est enim. In hac habitasse platea dictumst. Nulla at suscipit mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquet urna vel metus bibendum, commodo rhoncus velit dapibus. Ut tincidunt
+                facilisis ullamcorper. Aenean gravida, ligula.</p>
+        </div>
+        <div class="info-icones">
+            <img src="Imgs/info-icones%20(1).png">
+        </div>
+    </section>
+
+    <div class="produtos-bg container">
+        <section id="produtos">
+            <h1>Produtos</h1>
+            <div class="produtos">
+                <div class="item-produtos">
+                    <p>Pães Especiais</p>
+                    <img src="Imgs/paes.jpg">
+                    <a class="produto-btn" href="#">VEJA MAIS</a>
+                </div>
+                <div class="item-produtos">
+                    <p>Salgadinhos Gourmets</p>
+                    <img src="Imgs/salgados.jpg">
+                    <a class="produto-btn" href="#">VEJA MAIS</a>
+                </div>
+                <div class="item-produtos">
+                    <p>Doces Gourmets</p>
+                    <img src="Imgs/doces.jpg">
+                    <a class="produto-btn" href="#">VEJA MAIS</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section id="contato" class="container contato">
+        <div class="separador-pao">
+            <img src="Imgs/separador.png">
+        </div>
+        <h1>Contato</h1>
+        <div class="container-contato">
+            <div class="mapa">
+                <img src="Imgs/mapa.jpg">
+            </div>
+            <div class="separador">
+                <img src="Imgs/separador(1).png">
+            </div>
+            <div class="info-padaria">
+                <h2>Endereço</h2>
+                <p>Rua Rio branco n° 28712</p><br>
+                <p>Centro,Caxias do sul - RS</p><br>
+                <a class="flecha" href="#">VER NO MAPA</a>
+                <h2 class="encomendas">Encomendas e Tele entrega</h2>
+                <p>Whatsapp:54 9999 9999</p><br>
+                <p>Telefones:54 9999 9999 54 8888 8888</p><br>
+                <h2 class="horario">Horários</h2>
+                <p>De segunda à sábado</p><br>
+                <p>Das 7:00 às 23:00</p><br>
+            </div>
+        </div>
+    </section>
+
+    <section id="faleConosco" class="container">
+        <div class="separador-pao">
+            <img src="Imgs/separador.png">
+        </div>
+        <div class="container-form-info">
+            <div class="icones-fundo1">
+                <img src="Imgs/Icones%20fundo%20virados.png">
+            </div>
+            <div class="mensagem">
+                <h1 class="mensagem-titulo">Mande nos uma mensagem</h1>
+                <p>Se você tem uma dúvida uma sugestão ou quer nos dizer algo nos mandem um email</p>
+                <p>ficaremos feliz em responder com o mesmo amor que fazemos nossos produtinho</p>
+            </div>
+            <div class="icones-fundo2">
+                <img src="Imgs/icones%20fundo.png">
+            </div>
+        </div>
+        <div class="container-form container">
+            <form>
+                <div>
+                    <p>Nome</p>
+                    <input type="text" id="nome"><br>
+                    <p>Email</p>
+                    <input type="Email" id="email"><br>
+                </div>
+                <div class="form-mensagem">
+                    <p>Mensagem</p>
+                    <textarea></textarea>
+                    <button type="submit">ENVIAR MENSAGEM</button>
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer-bg">
+            <p>&ndash;NOBRE PADARIA - TODOS OS DIRETOS RESERVADOS<b>2021</b>&ndash;</p>
+            <div class="icones-rede">
+                <div>
+                    <a href=""><img src="./Imgs/facebook.png"></a>
+                </div>
+                <div>
+                    <a href=""><img src="./Imgs/twwiter.png"></a>
+                </div>
+                <div>
+                    <a href=""><img src="./Imgs/instagram.png"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script1.js"></script>
+</body>
+
+</html>

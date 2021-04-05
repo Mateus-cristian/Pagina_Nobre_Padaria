@@ -1,0 +1,76 @@
+// Cores
+$cor-texto: #17222D;
+$cor-botao: #D91504;
+$cor-info-icone: #445566;
+$cor-primaria: hsl(208, 100%, 57%);
+$cor-fundo: #EFF4F9;
+$cor-input: #c4c4c4;
+// Fontes
+$fonte-1: 'Gabriela',
+serifa,
+Helvetica,
+'roboto';
+$fonte-2: 'Open sans',
+Georgia,
+Arial;
+// funcão para converter pixel em EM
+@function em($pixel, $contexto: 16) {
+    @return $pixel / $contexto+em;
+}
+
+// Mixin para tamanho da Fonte
+@mixin tipo-1($size) {
+    font-family: $fonte-1;
+    @if $size==18 {
+        font-size: em(18);
+        line-height: em(30, 18)
+    }
+    @if $size==24 {
+        font-size: em(24);
+        line-height: em(30, 24)
+    }
+    @else if $size==36 {
+        font-size: em(36);
+        line-height: em(30, 36)
+    }
+    @else if $size==48 {
+        font-size: em(48);
+        line-height: em(30, 48)
+    }
+}
+
+@mixin tipo-2($size) {
+    font-family: $fonte-2;
+    @if $size==13 {
+        font-size: em(13);
+        line-height: em(30, 13);
+    }
+    @if $size==18 {
+        font-size: em(18);
+        line-height: em(30, 18);
+    }
+    @else if $size==21 {
+        font-size: em(21);
+        line-height: em(30, 21);
+    }
+    @else if $size==24 {
+        font-size: em(24);
+        line-height: em(30, 24);
+    }
+    @else if $size==30 {
+        font-size: em(30);
+        line-height: em(30, 30);
+    }
+    @else if $size==36 {
+        font-size: em(36);
+        line-height: em(30, 36);
+    }
+    @else if $size==48 {
+        font-size: em(48);
+        line-height: em(36, 48);
+    }
+}
+
+//box shadow
+$box-shadow: 2px 2px 0px 0 rgba(0, 0, 0, .5),
+0 2px 2px 0 rgba(0, 0, 0, .5);
